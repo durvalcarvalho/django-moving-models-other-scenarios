@@ -1,6 +1,6 @@
 ### Scenarios
 
-#### 1. Moving tables with elements (e.g. indexes) not defined by the model
+#### 1. Moving tables with indexes not defined by the model
 
 This scenario explores the implications of moving a model from one Django app to another, where the model's associated database elements (such as indexes) were not defined by the model itself. This can potentially cause issues in the new app, where the necessary indexes may not be present, leading to performance or data consistency problems.
 
