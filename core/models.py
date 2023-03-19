@@ -1,8 +1,6 @@
 from django.db import models
 
-
-class Category(models.Model):
-    name = models.CharField(max_length=255)
+from categories.models import Category
 
 
 class Product(models.Model):

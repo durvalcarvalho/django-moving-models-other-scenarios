@@ -35,3 +35,27 @@ FOR EACH ROW EXECUTE PROCEDURE core_category_name_uppercase();
 ```bash
 git checkout triggers-pos-moving-model
 ```
+
+# 6. Run makemigrations command, and confirm model moving
+```bash
+python manage.py makemigrations
+```
+
+# 7. Run the django migrations
+```bash
+python manage.py migrate
+```
+
+
+# 8. It's not supposed to any error, run some queries to confirm
+
+```bash
+python manage.py shell
+
+from categories.models import Category
+
+Category.objects.create(name='lowercase')
+
+c = Category.objects.last()
+assert c.name == 'LOWERCASE', 'The name should be "LOWERCASE"'
+```
