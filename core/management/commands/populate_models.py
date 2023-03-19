@@ -1,7 +1,7 @@
 import random
 from django.core.management.base import BaseCommand
 
-from core.models import Category
+from categories.models import Category
 from core.models import Product
 
 from faker import Faker
